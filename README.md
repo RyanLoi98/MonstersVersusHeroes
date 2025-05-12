@@ -33,12 +33,19 @@ java mvh.Main world.txt log.txt 12345
 
 ```
 
-* `world.txt`: Input file defining the game grid and initial entities (I have 2 world files for you to choose from, `world.txt` and `worldbig.txt` for the larger game world)
+* `world.txt`: Input file defining the game grid and initial entities (I have 2 world files for you to choose from (they are in the src directory), `world.txt` and `worldbig.txt` for the larger game world)
 * `log.txt`: Output file to record game logs and simulation steps (this is just the name you want to call your output file that logs the game activity)
 * `12345`: Random seed for consistent game behavior (change it to vary outcomes) 
 
 
 When the game starts to can either enter: C into the terminal to complete the entire simulation, E to exit, or any other key press to go through the game step by step.
+
+
+## 📸 Demo Screenshot
+
+Here’s a screenshot of the game in action:
+
+![Screenshot](https://imgur.com/vi9wTaV.png)
 
 ---
 
@@ -69,6 +76,22 @@ The project includes **8+ JUnit 5 test cases** for key functions:
 Tests are located in the `mvh/world/` folder (the file is named `MvHTest.java`) and validate game correctness with controlled grid inputs. To use this test file ensure you
 have all the JUnit 5 dependencies downloaded to your computer and accessible to the test file, you can do this via command line or use IntelliJ to set it up for you - which is what I personally did. Afterwards compile the test file and run it.
 
+
+To run the tests:
+
+```bash
+#cd into the src/mhv/world directory
+javac -cp .:junit-platform-console-standalone-1.9.0.jar MvHTest.java
+java -jar junit-platform-console-standalone-1.9.0.jar --class-path . --scan-classpath
+```
+
+
+## 📸 Demo Screenshot
+
+Here’s a screenshot of the tests in action:
+
+![Screenshot](https://imgur.com/1rZzwIQ.png)
+
 ---
 
 ## 🧱 Object-Oriented Design Highlights
@@ -81,17 +104,6 @@ have all the JUnit 5 dependencies downloaded to your computer and accessible to 
 | Enums          | `Direction.java`, `WeaponType.java`       |
 | Static Classes | `Logger.java`, `Reader.java`              |
 | Encapsulation  | Internal state management in `World.java` |
-
----
-
-## 🎯 Bonus Features (Optional)
-
-> Included in `Bonus` version if implemented
-
-* ✅ **Hero Classes**: Mage, Fighter, Rogue with different stat scaling
-* ✅ **Monster Types**: Kobold, Drake, White Dragon with unique behavior
-* ✅ **Traps and Walls**: Traps affect only Heroes; Walls block movement
-* ✅ **Symbol Mapping**: Custom symbols for new entity classes
 
 ---
 
