@@ -21,13 +21,24 @@ This assignment highlights key **object-oriented programming (OOP)** concepts in
 
 ## 🕹️ How to Run the Game
 
+
 ```bash
-java Main world.txt log.txt 12345
+cd src
+javac @sources.txt
 ```
 
-* `world.txt`: Input file defining the game grid and initial entities
-* `log.txt`: Output file to record game logs and simulation steps
-* `12345`: Random seed for consistent game behavior (change it to vary outcomes)
+```bash
+# from the src directory run
+java mvh.Main world.txt log.txt 12345
+
+```
+
+* `world.txt`: Input file defining the game grid and initial entities (I have 2 world files for you to choose from, `world.txt` and `worldbig.txt` for the larger game world)
+* `log.txt`: Output file to record game logs and simulation steps (this is just the name you want to call your output file that logs the game activity)
+* `12345`: Random seed for consistent game behavior (change it to vary outcomes) 
+
+
+When the game starts to can either enter: C into the terminal to complete the entire simulation, E to exit, or any other key press to go through the game step by step.
 
 ---
 
@@ -55,7 +66,8 @@ The project includes **8+ JUnit 5 test cases** for key functions:
 * `Hero.chooseMove()` / `attackWhere()` – 2 each
 * `Monster.chooseMove()` / `attackWhere()` – 2 each
 
-Tests are located in the `mvh/test/` folder and validate game correctness with controlled grid inputs.
+Tests are located in the `mvh/world/` folder (the file is named `MvHTest.java`) and validate game correctness with controlled grid inputs. To use this test file ensure you
+have all the JUnit 5 dependencies downloaded to your computer and accessible to the test file, you can do this via command line or use IntelliJ to set it up for you - which is what I personally did. Afterwards compile the test file and run it.
 
 ---
 
